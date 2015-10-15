@@ -139,7 +139,7 @@
             redirectParamName: undefined,
             // Set the following option to the location of a postMessage window,
             // to enable postMessage transport uploads:
-            postMessage: true,
+            postMessage: undefined,
             // By default, XHR file uploads are sent as multipart/form-data.
             // The iframe transport is always using multipart/form-data.
             // Set to false to enable non-multipart XHR uploads:
