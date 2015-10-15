@@ -229,7 +229,9 @@
             // send: function (e, data) {}, // .bind('fileuploadsend', func);
 
             // Callback for successful uploads:
-            // done: function (e, data) {}, // .bind('fileuploaddone', func);
+            // done: function (e, data) {
+            //     console.log('Processing ' + data.files[data.index].name + ' done.');
+            // }, // .bind('fileuploaddone', func);
 
             // Callback for failed (abort or error) uploads:
             // fail: function (e, data) {}, // .bind('fileuploadfail', func);
