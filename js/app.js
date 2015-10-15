@@ -61,6 +61,7 @@
                             function (response) {
                                 $scope.loadingFiles = false;
                                 $scope.queue = response.data.files || [];
+                                $scope.showiFrame = true;
                             },
                             function () {
                                 $scope.loadingFiles = false;
