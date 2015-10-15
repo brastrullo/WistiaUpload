@@ -49,7 +49,7 @@
             '$scope', '$http', '$filter', '$window',
             function ($scope, $http) {
                 $scope.options = {
-                    url: url,
+                    file: url,
                     api_password: password
                 };
                 if (!isOnGitHub) {
