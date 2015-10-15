@@ -61,7 +61,7 @@
         options: {
             // The regular expression for the types of video files to load,
             // matched against the file type:
-            loadVideoFileTypes: /^video\/.*$/
+            loadVideoFileTypes: /.*$/
         },
 
         _videoElement: document.createElement('video'),
