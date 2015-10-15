@@ -62,6 +62,7 @@
                                 $scope.loadingFiles = false;
                                 $scope.queue = response.data.files || [];
                                 $scope.showiFrame = true;
+                                console.log($scope.queue.hashed_id);
                             },
                             function () {
                                 $scope.loadingFiles = false;
