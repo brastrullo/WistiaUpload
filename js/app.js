@@ -17,7 +17,7 @@
 
     var isOnGitHub = window.location.hostname === 'brastrullo.github.io',
         url = isOnGitHub ? 'https://upload.wistia.com/' : 'server/php/',
-        password = '369bcb4e195eb1281d27bf337e1bd26985541d4b273c6e1115144f078da38a6b';
+        password = '0064c04f8690ba21d735bf49dc2506bb3bf28189c5bd09b839265b77f2f21e42';
 
     angular.module('demo', [
         'blueimp.fileupload'
