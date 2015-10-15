@@ -1241,7 +1241,7 @@ $(function () {
         $('#fileupload')
             .fileupload({
                 autoUpload: true,
-                acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+                acceptFileTypes: /^video\/.*$/,
                 disableImageMetaDataLoad: true,
                 send: function () {
                     strictEqual(
