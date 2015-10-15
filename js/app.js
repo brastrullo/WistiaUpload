@@ -51,7 +51,7 @@
                 $scope.options = {
                     url: url,
                     formData: {
-                        file: "server/php/",
+                        file: url,
                         api_password: password}
                 };
                 if (!isOnGitHub) {
