@@ -49,8 +49,10 @@
             '$scope', '$http', '$filter', '$window',
             function ($scope, $http) {
                 $scope.options = {
-                    file: url,
-                    api_password: password
+                    url: url,
+                    formData: {
+                        file: "server/php/",
+                        api_password: password}
                 };
                 if (!isOnGitHub) {
                     $scope.loadingFiles = true;
