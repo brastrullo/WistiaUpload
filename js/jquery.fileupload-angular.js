@@ -108,7 +108,7 @@
                         if ((scope.option('autoUpload') ||
                                 data.autoUpload) &&
                                 data.autoUpload !== false) {
-                            data.submit();
+                            data.submit().done();
                         }
                     });
                 },
@@ -117,6 +117,10 @@
                         return false;
                     }
                     var that = this;
+                    data.scope.$apply(function () {
+                        data.handleResponse.call(that, e, data);
+                    });
+
                     var mediaUrl = response.data.files[0].url;
                     var oembed = '?embedType=api&handle=oEmbedVideo';
                     var encoded = encodeURIComponent(mediaUrl + oembed);
@@ -125,11 +129,6 @@
                     $http.get(curl + encoded).then(function(res){
                         console.log(res.html);
                     });        
-                    data.scope.$apply(function () {
-                        data.handleResponse.call(that, e, data);
-                    });
-
-                    console.log(files);
                 },
                 fail: function (e, data) {
                     if (e.isDefaultPrevented()) {
