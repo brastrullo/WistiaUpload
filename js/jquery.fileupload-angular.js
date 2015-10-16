@@ -108,7 +108,7 @@
                         if ((scope.option('autoUpload') ||
                                 data.autoUpload) &&
                                 data.autoUpload !== false) {
-                            data.submit().done();
+                            data.submit().done;
                         }
                     });
                 },
