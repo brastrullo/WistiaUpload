@@ -108,7 +108,7 @@
                         if ((scope.option('autoUpload') ||
                                 data.autoUpload) &&
                                 data.autoUpload !== false) {
-                            data.submit().done;
+                            data.submit();
                         }
                     });
                 },
@@ -120,15 +120,6 @@
                     data.scope.$apply(function () {
                         data.handleResponse.call(that, e, data);
                     });
-
-                    var mediaUrl = response.data.files[0].url;
-                    var oembed = '?embedType=api&handle=oEmbedVideo';
-                    var encoded = encodeURIComponent(mediaUrl + oembed);
-                    var curl = "http://fast.wistia.com/oembed.json?url=";
-                    console.log("Hello");
-                    $http.get(curl + encoded).then(function(res){
-                        console.log(res.html);
-                    });        
                 },
                 fail: function (e, data) {
                     if (e.isDefaultPrevented()) {
