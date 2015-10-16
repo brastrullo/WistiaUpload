@@ -62,7 +62,7 @@
                                 var baseUrl = url + "oembed/?url=";
                                 var oembed = '?embedType=api&handle=oEmbedVideo';
                                 var accountUrl = encodeURIComponent("https://bradleyrastrullo.wistia.com/projects");
-                                alert(response.data.files.hashed_id);
+                                alert(response.data.files[0].hashed_id);
                                 
                             },
                             function () {
