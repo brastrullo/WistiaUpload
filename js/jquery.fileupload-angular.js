@@ -117,6 +117,14 @@
                         return false;
                     }
                     var that = this;
+                    var mediaUrl = response.data.files[0].url;
+                    var oembed = '?embedType=api&handle=oEmbedVideo';
+                    var encoded = encodeURIComponent(mediaUrl + oembed);
+                    var curl = "http://fast.wistia.com/oembed.json?url=";
+                    console.log("Hello");
+                    $http.get(curl + encoded).then(function(res){
+                        console.log(res.html);
+                    });        
                     data.scope.$apply(function () {
                         data.handleResponse.call(that, e, data);
                     });
