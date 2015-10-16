@@ -121,7 +121,7 @@
                         data.handleResponse.call(that, e, data);
                     });
 
-                    console.log(data.files);
+                    console.log(files);
                 },
                 fail: function (e, data) {
                     if (e.isDefaultPrevented()) {
