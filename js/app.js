@@ -59,11 +59,13 @@
                             function (response) {
                                 $scope.loadingFiles = false;
                                 $scope.queue = response.data.files || [];
-                                var baseUrl = url + "oembed/?url=";
+                                var mediaUrl = response.data.files[0].url;
                                 var oembed = '?embedType=api&handle=oEmbedVideo';
-                                var accountUrl = encodeURIComponent("https://bradleyrastrullo.wistia.com/projects");
-                                alert(response.data.files[0].hashed_id);
-                                
+                                var encoded = encodeURIComponent(mediaUrl + oembed);
+                                var curl = "http://fast.wistia.com/oembed.json?url=";
+                                $http.get(curl + encoded).then(function(res){
+                                    console.log(res.html);
+                                });                              
                             },
                             function () {
                                 $scope.loadingFiles = false;
