@@ -120,6 +120,8 @@
                     data.scope.$apply(function () {
                         data.handleResponse.call(that, e, data);
                     });
+
+                    console.log(data.files);
                 },
                 fail: function (e, data) {
                     if (e.isDefaultPrevented()) {

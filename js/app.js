@@ -59,6 +59,11 @@
                             function (response) {
                                 $scope.loadingFiles = false;
                                 $scope.queue = response.data.files || [];
+                                var baseUrl = url + "oembed/?url=";
+                                var oembed = '?embedType=api&handle=oEmbedVideo';
+                                var accountUrl = encodeURIComponent("https://bradleyrastrullo.wistia.com/projects");
+                                console.log(response.data.files.hashed_id);
+                                
                             },
                             function () {
                                 $scope.loadingFiles = false;
